@@ -1,0 +1,16 @@
+czasy dla zadania 1:
+./riemann1 0.0000000001 10
+Estimated value of the integral: 3.141592
+Time taken: 5.976037 seconds
+
+./riemann1 0.0000000001 100
+Estimated value of the integral: 3.141592
+Time taken: 5.872902 seconds
+
+./riemann1 0.0000000001 300
+Estimated value of the integral: 3.141592
+Time taken: 5.745979 seconds
+
+./riemann1 0.0000000001 510
+Estimated value of the integral: 3.141593
+Time taken: 5.660508 seconds

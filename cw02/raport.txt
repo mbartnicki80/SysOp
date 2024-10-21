@@ -1,0 +1,1 @@
+Zadanie zrobiłem w całości, jedynym problemem było stworzenie odpowiedniego makefile

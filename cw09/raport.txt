@@ -1,0 +1,2 @@
+Wykomentowany signal - dlaczego są tylko 2 plansze, które pojawiają się na zmianę?
+A po zamianie na struct sigaction działa poprawnie

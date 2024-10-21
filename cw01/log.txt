@@ -1,0 +1,100 @@
+roxen12@DESKTOP-E4D2U6J:~/BartnickiMateusz/cw01$ gdb ./countdown
+GNU gdb (Ubuntu 12.1-0ubuntu1~22.04) 12.1
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+--Type <RET> for more, q to quit, c to continue without paging--c
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./countdown...
+(gdb) run
+Starting program: /home/roxen12/BartnickiMateusz/cw01/countdown 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+[Inferior 1 (process 22764) exited normally]
+(gdb) b 5
+Breakpoint 1 at 0x55555555515e: file countdown.c, line 5.
+(gdb) run
+Starting program: /home/roxen12/BartnickiMateusz/cw01/countdown 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at countdown.c:5
+5               printf("%d\n", i);
+(gdb) c
+Continuing.
+10
+
+Breakpoint 1, main () at countdown.c:5
+5               printf("%d\n", i);
+(gdb) c
+Continuing.
+9
+
+Breakpoint 1, main () at countdown.c:5
+5               printf("%d\n", i);
+(gdb) c
+Continuing.
+8
+
+Breakpoint 1, main () at countdown.c:5
+5               printf("%d\n", i);
+(gdb) d 1
+(gdb) info breakpoint
+No breakpoints or watchpoints.
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 22830] will be killed.
+
+Quit anyway? (y or n) y
+roxen12@DESKTOP-E4D2U6J:~/BartnickiMateusz/cw01$ make all
+rm -f countdown
+gcc -Wall -g -std=c17 countdown.c -o countdown
+roxen12@DESKTOP-E4D2U6J:~/BartnickiMateusz/cw01$ ./countdown
+100 1.11
+90 2.22
+80 3.33
+70 4.44
+60 5.55
+50 6.67
+40 7.78
+30 8.89
+20 10.00
+10 11.11
+0 12.22
+roxen12@DESKTOP-E4D2U6J:~/BartnickiMateusz/cw01$ make all
+rm -f countdown
+gcc -Wall -g -std=c17 countdown.c -o countdown
+roxen12@DESKTOP-E4D2U6J:~/BartnickiMateusz/cw01$ ./countdown
+100 1.11
+90 2.22
+80 3.33
+70 4.44
+60 5.55
+50 6.67
+40 7.78
+30 8.89
+20 10.00
+10 11.11
+00 12.22
